@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="preload-noscroll" lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        
+        <!-- Ensure page does not zoom out on mobile devices when loading -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="description" content="Chris Walker, web developer and full-stack engineer - portfolio website.">
+        <meta name="keywords" content="HTML, HTML5, CSS, CSS3, JavaScript, jQuery, web, development, PHP, AJAX, cURL, React, Node">
+        <meta name="author" content="Chris Walker">
+        
+        <!-- Third-party CSS reset to remove built-in browser styling -->
+        <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css">
+        <!-- Third-party CSS for grid layout and alignment -->
+        <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css">
+        <!-- Third-party CSS for animation effects -->
+        <link rel="stylesheet" type="text/css" href="./vendors/css/animate.min.css">
+        <!-- Third-party CSS for icons (Font Awesome) -->
+        <link rel="stylesheet" type="text/css" href="./vendors/css/all.css">
+        <!-- Google Fonts for the main website font family -->
+        <link rel="stylesheet" type="text/css" href="./vendors/css/fonts.css">
+        <!-- Main styling for the website -->
+        <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+
+        <!-- Set up favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="./resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="./resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Chris Walker - Portfolio Website</title>
+        
+    </head>
+    <body class="preload-noscroll">
+        <!-- Preloader while the site is loading -->
+        <div id="preloader">
+            <div class="cube-grid">
+                <div class="cube cube1"></div>
+                <div class="cube cube2"></div>
+                <div class="cube cube3"></div>
+                <div class="cube cube4"></div>
+                <div class="cube cube5"></div>
+                <div class="cube cube6"></div>
+                <div class="cube cube7"></div>
+                <div class="cube cube8"></div>
+                <div class="cube cube9"></div>
+            </div>
+        </div>
+        
+        <!-- Slide out project information panel - hidden by default until a project is selected -->
+        <div id="panel" class="panel-closed">
+            <div id="panel-header">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="panel-content">
+                <div id="project-1-text">
+                    <h2>Portfolio Website</h2>
+                    <ul>
+                        <li>Built from the ground up without CSS frameworks (Bootstrap, etc.)</li>
+                        <li>CSS preloader</li>
+                        <li>Flexbox to facilitate a modern, responsive layout</li>
+                        <li>Media queries to optimise both the desktop and mobile experience</li>
+                        <li>Waypoints JavaScript library for navigating between sections</li>
+                        <li>Animation CSS library for subtle fading and sliding effects on elements</li>
+                        <li>Third-party font library for scalable logos</li>
+                        <li>Google Fonts for typography</li>
+                        <li>JavaScript and jQuery for 'sticky' and mobile menus, scrolling to waypoints and toggling project information panels</li>
+                        <li>PHP/AJAX contact form with reCAPTCHA integration</li>
+                    </ul>
+                </div>
+                <div class="panel-buttons" id="project-1-buttons">
+                    <a class="btn btn-full" href="https://github.com/chrismwalker-portfolio/chrismwalker" target="_blank">Visit On GitHub</a>
+                </div>
+                <div id="project-2-text">
+                    <h2>Animal Crossing: New Horizons - Villagers app</h2>
+                    <ul>
+                        <li>Built with React as a single-page application (SPA)</li>
+                        <li>Asynchronous JavaScript calling a third-party API</li>
+                        <li>React Hooks managing state and side-effects</li>
+                        <li>React Router conditionally rendering components based on the route in the URL</li>
+                        <li>Google Fonts for typography</li>
+                        <li>Ionicons for scalable SVG icons</li>
+                        <li>CSS grid facilitating a responsive layout</li>
+                        <li>Media queries to enhance the responsive layout</li>
+                        <li>Image lazy loading to improve app performance</li>
+                    </ul>
+                </div>
+                <div class="panel-buttons" id="project-2-buttons">
+                    <a class="btn btn-full" href="https://chrismwalker.co.uk/acnh" target="_blank">Go To App</a>
+                    <a class="btn btn-ghost-panel" href="https://github.com/chrismwalker-portfolio/acnh-villagers-app" target="_blank">Visit On GitHub</a>
+                </div>
+            </div>
+        </div>
+        <!-- Semantic HTML to improve accessibility -->
+        <header>
+            <nav>
+                <div class="row">
+                    <img src="./resources/images/cw-logo-white.png" alt="Chris Walker logo" class="logo">
+                    <img src="./resources/images/cw-logo-black.png" alt="Chris Walker logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#projects">My Projects</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <!-- Mobile navigation icon for smaller screens - hidden by default in CSS -->
+                    <!-- Displayed through media queries as screen size reduces -->
+                    <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1 class="standard-hero-text">Hello, I'm Chris Walker.<br><br>Web Developer &amp;<br>Full-Stack Engineer.</h1>
+                <h1 class="compact-hero-text">Hello, I'm Chris Walker.<br>Web Developer &amp; Full-Stack Engineer.</h1>
+                <a class="btn btn-full js--scroll-to-projects" href="#">My Projects</a>
+                <a class="btn btn-ghost js--scroll-to-about" href="#">About Me</a>
+            </div>
+        </header>
+
+        <!-- Semantic HTML to improve accessibility -->
+        <main>
+            <!--  ******* PROJECTS SECTION ******* -->
+
+            <section class="section-projects js--section-projects" id="projects">
+                <div class="row">
+                    <h2>My Projects</h2>
+                </div>
+                
+                <!-- Waypoint 1 - use Javascript to fade in project boxes on scroll -->
+                <div class="row js--wp-1">
+
+                    <!-- Flexbox to arrange the project boxes -->
+                    <div class="projects-flex-container">
+                        <div class="project-box" id="project-1">
+                            <h3>Portfolio Website</h3>
+                            <img src="./resources/images/screenshot-portfolio.jpg" alt="Screenshot of portfolio website project">
+                            <h4>This website itself demonstrates several key web development skills</h4>
+                        </div>
+                        <div class="project-box" id="project-2">
+                            <h3>ACNH - Villagers app</h3>
+                            <img src="./resources/images/screenshot-acnh.jpg" alt="Screenshot of Animal Crossing project">
+                            <h4>A React application showcasing the Villagers from the Nintendo Switch game 'Animal Crossing: New Horizons'</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******* ABOUT ME SECTION ******* -->
+
+            <section class="section-about js--section-about" id="about">
+                <div class="row">
+                    <h2>About Me</h2>
+                </div>
+                <div class="row">
+                    <!-- Waypoint 2 - use Javascript to fade in/slide from left profile picture on scroll -->
+                    <div class="col span-1-of-3 box row profile js--wp-2a">
+                        <img src="./resources/images/profile-pic.jpg" alt="Photo of Chris Walker">
+                    </div>
+                    <div class="col span-2-of-3 about-box js--wp-2b">
+                        <!-- Semantic HTML to improve accessibility -->
+                        <article class="about-me">
+                            <h3>My Experience</h3>
+                            <!-- 'About' text begins here -->
+                            <div class="about-point">
+                                <div><i class="fas fa-university"></i></div>
+                                <div class="about-text"><p>BSc (Hons) Business Information Technology</p></div>
+                            </div>
+                            <div class="about-point">
+                                <div><i class="fas fa-microchip"></i></div>
+                                <div class="about-text"><p>23 years' experience in the IT industry</p></div>
+                            </div>
+                            <div class="about-point">
+                                <div><i class="fas fa-shopping-bag"></i></div>
+                                <div class="about-text"><p>Expertise in the retail and mobile telecoms industries</p></div>
+                            </div>
+                            <div class="about-point">
+                                <div><i class="fas fa-user-tie"></i></div>
+                                <div class="about-text">
+                                    <p>Roles include:<br><br></p>
+                                    <ul>
+                                        <li>Development</li>
+                                        <li>Systems Analysis</li>
+                                        <li>Solution Design</li>
+                                        <li>Solution Architecture</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******* SKILLS SECTION ******* -->
+
+            <section class="section-skills js--section-skills" id="skills">
+                <div class="row">
+                    <h2>My skills include...</h2>
+                </div>
+                <div class="row">
+
+                    <!-- Flexbox to arrange the skill icons -->
+                    <!-- Font Awesome for scalable logos -->
+                    <div class="skills-contact-flex-container">
+                        <div class="logo-flex-item">
+                            <i class="fab fa-html5"></i>
+                            <h3>HTML5</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <h3>CSS3</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-js"></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-node-js"></i>
+                            <h3>Node</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-react"></i>
+                            <h3>React</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-js"></i>
+                            <h3>jQuery</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-php"></i>
+                            <h3>PHP</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-java"></i>
+                            <h3>Java</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fab fa-python"></i>
+                            <h3>Python</h3>
+                        </div>
+                        <div class="logo-flex-item">
+                            <i class="fas fa-hashtag"></i>
+                            <h3>C#</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row certifications">
+                    <div>
+                        <a href="https://www.credly.com/badges/cf0b75f0-dea0-4dc9-afb3-9811836cd90e/public_url" target="_blank"><img src="./resources/images/mta-badge.png" alt="MTA certified"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ******* CONTACT SECTION ******* -->
+
+            <section class="section-contact js--section-contact" id="contact">
+                <div class="row">
+                    <h2>Contact</h2>
+                </div>
+                <div class="row">
+
+                    <!-- Flexbox to arrange the contact icons -->
+                    <!-- Font Awesome for scalable logos -->
+                    <div class="skills-contact-flex-container">
+                        <a href="https://github.com/chrismwalker-portfolio" target="_blank">
+                            <div class="logo-flex-item js--wp-3">
+                                <i class="fab fa-github"></i>
+                                <h3>GitHub</h3>
+                            </div>
+                        </a>
+                        <a href="https://chrismwalker.co.uk" target="_blank">
+                            <div class="logo-flex-item js--wp-3">
+                                <i class="fas fa-globe"></i>
+                                <h3>chrismwalker.co.uk</h3>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/cwalkeruk" target="_blank">
+                            <div class="logo-flex-item js--wp-3">
+                                <i class="fab fa-linkedin"></i>
+                                <h3>LinkedIn</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="row">
+                    <form method="post" action="./resources/php/sendContactMail.php" class="contact-form">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="name" id="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="email" name="email" id="email" placeholder="Your email address" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="subject" id="subject" placeholder="Subject of your message" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="message">Your message</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <textarea name="message" id="message" placeholder="Your message" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp;</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <div class="g-recaptcha" data-sitekey="6Ldb7bsaAAAAAB49sNy4PCvOjeXQZ8Xs5da1nxBh" data-size="compact"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp;</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="submit" id="submitContactForm" value="Send">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Form outcome banners - hidden by default until form submission -->
+                <div class="row js--form-success">
+                    <i class="form-icon fas fa-times"></i>
+                    <p>Thank you for your message! I will reply as soon as possible.</p>
+                </div>
+                <div class="row js--form-error">
+                    <i class="form-icon fas fa-times"></i>
+                    <p>There was an error sending your message. Please try again.</p>
+                </div>
+                <div class="row js--form-invalid">
+                    <i class="form-icon fas fa-times"></i>
+                    <p>Validation failed. Please try again.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="row">
+                <p class="copyright">
+                    Copyright &copy; 2021 by Chris Walker. All rights reserved.
+                </p>
+                <p class="wireframe">
+                    Click <a href="./info/portfolio-wireframe.png" target="_blank">here</a> for a wireframe of this site!
+                </p>
+            </div>
+        </footer>
+
+        <!-- Google reCAPTCHA for contact form validation -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        
+        <!-- jQuery library -->
+        <script src="./vendors/js/jquery.min.js"></script>
+        
+        <!-- 'Waypoints' JavaScript for navigating to sections of the webpage -->
+        <script src="./vendors/js/jquery.waypoints.min.js"></script>
+        
+        <!-- Main JavaScript / jQuery file -->
+        <script src="./resources/js/script.js"></script>
+
+    </body>    
+</html>
