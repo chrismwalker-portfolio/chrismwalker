@@ -91,6 +91,13 @@ $(document).ready(function() {
         offset: '80%'
     });
 
+    /* Waypoint 4 - zoom in the skills logos */
+    $('.js--wp-4').waypoint(function(direction) {
+      $('.js--wp-4').addClass('animate__animated animate__zoomIn');
+    }, {
+      offset: '50%'
+    });
+
     /* Toggle navigation icon as user clicks to open/close mobile menu */
     $('.js--nav-icon').click(function() {
       var nav = $('.js--main-nav');
