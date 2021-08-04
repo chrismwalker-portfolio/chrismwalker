@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="description" content="Chris Walker, web developer and full-stack engineer - portfolio website.">
-        <meta name="keywords" content="HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript, jQuery, web, development, PHP, AJAX, cURL, React, Node">
+        <meta name="keywords" content="HTML, HTML5, CSS, CSS3, Bootstrap, JavaScript, jQuery, web, development, PHP, AJAX, cURL, React, Node, RDBMS, MariaDB, SQL">
         <meta name="author" content="Chris Walker">
         
         <!-- Third-party CSS reset to remove built-in browser styling -->
@@ -109,6 +109,21 @@
                     <a class="btn btn-full" href="https://chrismwalker.co.uk/gazetteer" target="_blank">Go To App</a>
                     <a class="btn btn-ghost-panel" href="https://github.com/chrismwalker-portfolio/gazetteer" target="_blank">Visit On GitHub</a>
                 </div>
+                <div id="project-4-text">
+                    <h2>Company Directory</h2>
+                    <ul>
+                        <li>A mobile-first, single-page data management web application to enable maintenance of a fictional company's personnel data</li>
+                        <li>Uses <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> for a clean, modern, mobile-first responsive design that adapts for larger screens, dynamically changing the number of database columns displayed depending on device screen size</li>
+                        <li>JavaScript/<a href="https://jquery.com" target="_blank">jQuery</a> controlling events in the user interface</li>
+                        <li>Client-side asynchronous AJAX calls initiating Create/Read/Update/Delete (CRUD) actions on the server-side database, to maintain a seamless, single-page application experience</li>
+                        <li>PHP scripts connecting to a <a href="https://mariadb.org" target="_blank">MariaDB</a> Relational Database Management System (RDBMS), via Structured Query Language (SQL) queries, to build, sort and return datasets to the client</li>
+                        <li>PHP logic managing foreign key relationships between database tables, ensuring referential integrity is respected by preventing deletion of referenced records</li>
+                    </ul>
+                </div>
+                <div class="panel-buttons" id="project-4-buttons">
+                    <a class="btn btn-full" href="https://chrismwalker.co.uk/directory" target="_blank">Go To App</a>
+                    <a class="btn btn-ghost-panel" href="https://github.com/chrismwalker-portfolio/directory" target="_blank">Visit On GitHub</a>
+                </div>
             </div>
         </div>
         <!-- Semantic HTML to improve accessibility -->
@@ -164,6 +179,11 @@
                             <h3>Gazetteer - World Directory</h3>
                             <img src="./resources/images/screenshot-gazetteer.jpg" alt="Screenshot of Gazetteer project">
                             <h4>A single-page web application that aggregates and displays country information using API integration</h4>
+                        </div>
+                        <div class="project-box" id="project-4">
+                            <h3>Company Directory</h3>
+                            <img src="./resources/images/screenshot-directory.jpg" alt="Screenshot of Company Directory project">
+                            <h4>A single-page web application that connects, via PHP, to a relational database to display and maintain its data</h4>
                         </div>
                     </div>
                 </div>
