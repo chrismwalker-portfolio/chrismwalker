@@ -39,7 +39,6 @@
 * {
     margin: 0;
     padding: 0;
-    
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -218,8 +217,8 @@ input[type=submit]:active {
 /* --------------------------------------------------- */
 
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/hero-background.jpg);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/hero-background.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/hero-background.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/hero-background.jpg);
     background-size: cover;
     background-position: center;
@@ -426,8 +425,8 @@ header {
 /* --------------------------------------------------- */
 
 .section-about {
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))), url(../images/about-background.jpg);
     background-image: -o-linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../images/about-background.jpg);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))), url(../images/about-background.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../images/about-background.jpg);
     background-size: cover;
     color: #fff;
@@ -1218,5 +1217,13 @@ footer a:active {
     /* Give some space between vertically stacked footer items */
     footer .wireframe {
         margin-top: 10px;
+    }
+}
+
+/* Disable unsupported fixed background image attachment on iOS */
+@supports (-webkit-touch-callout: none) {
+    header,
+    .section-about {
+        background-attachment: scroll;
     }
 }
