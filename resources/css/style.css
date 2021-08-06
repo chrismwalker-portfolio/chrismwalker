@@ -348,7 +348,11 @@ header {
 /* --------------------------------------------------- */
 
 .section-projects {
-    background-color: #f4f4f4;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(244, 244, 244, 0.85)),to(rgba(244, 244, 244, 0.85))), url(../images/projects-background.jpg);
+    background-image: linear-gradient(rgba(244, 244, 244, 0.85),rgba(244, 244, 244, 0.85)), url(../images/projects-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .section-projects .long-copy {
@@ -492,7 +496,11 @@ header {
 /* --------------------------------------------------- */
 
 .section-skills {
-    background-color: #f4f4f4;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(244, 244, 244, 0.95)),to(rgba(244, 244, 244, 0.95))), url(../images/skills-background.jpg);
+    background-image: linear-gradient(rgba(244, 244, 244, 0.95),rgba(244, 244, 244, 0.95)), url(../images/skills-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Flexboxes to arrange the skills and contact icons */
@@ -1116,6 +1124,12 @@ footer a:active {
     .panel-content .panel-buttons a {
         display: block;
         margin: 0 auto 15px auto;
+    }
+
+    /* Remove the background image in 'Projects' section */
+    .section-projects {
+        background: none;
+        background-color: #f4f4f4;
     }
 
     /* Reduce the size of the profile picture as the screen size reduces */
